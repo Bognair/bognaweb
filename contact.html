@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOGNAIR - Kapcsolat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <h1 class="logo">BOGNAIR</h1>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Rólam</a></li>
+                    <li><a href="references.html">Referenciák</a></li>
+                    <li><a href="request.html">Ajánlatkérés</a></li>
+                    <li><a href="contact.html" class="active">Kapcsolat</a></li>
+                    <button id="theme-toggle" class="theme-toggle-button" aria-label="Téma váltása"><i class="fas fa-moon"></i></button>
+
+                </ul>
+                <div class="hamburger-menu" aria-label="Menü megnyitása/bezárása" role="button" tabindex="0">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact-info" class="contact-info-section container">
+            <h2 class="scroll-anim fade-in-up">Lépjen Kapcsolatba</h2>
+            <div class="contact-details-grid">
+                <div class="contact-detail-card scroll-anim fade-in-left">
+                    <i class="fas fa-envelope"></i>
+                    <h3>E-mail</h3>
+                    <p><a href="mailto:benedek01bognar@gmail.com">benedek01bognar@gmail.com</a></p>
+                </div>
+                <div class="contact-detail-card scroll-anim fade-in-left" data-scroll-delay="100">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Telefon</h3>
+                    <p><a href="tel:+36204813057">+36 20 481 3057</a></p>
+                </div>
+                <div class="contact-detail-card scroll-anim fade-in-left" data-scroll-delay="200">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Cím</h3>
+                    <p>1144 Budapest, Szentmihályi út 20-22.</p>
+                </div>
+            </div>
+
+            <div class="office-map-container">
+                <div class="office-image scroll-anim fade-in-up">
+                    <img src="img/office.JPG" alt="Irodám beltere" width="800" height="500">
+                    <p class="caption">Hangulatos irodám, ahol az ötletek életre kelnek.</p>
+                </div>
+                <div class="map-container scroll-anim fade-in-up" data-scroll-delay="200">
+                    <h3 class="map-title">Hol talál meg?</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2694.9754298150454!2d19.06093841561726!3d47.49791287917327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741c305c743e33f%3A0x400c4290c1e1910!2sBudapest%2C%20Hungary!5e0!3m2!1sen!2shu!4v1652882888888!5m2!1sen!2shu"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Térkép a címemről">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h3>BOGNAIR</h3>
+                    <p>Ahol a történetek sosem érnek véget, még offline sem. Merülj el a szórakozásban bárhol, bármikor!</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/in/yourprofile" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/yourusername" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Gyorslinkek</h3>
+                    <ul>
+                        <li><a href="index.html">Rólam</a></li>
+                        <li><a href="references.html">Referenciák</a></li>
+                        <li><a href="request.html">Ajánlatkérés</a></li>
+                        <li><a href="contact.html">Kapcsolat</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Információk</h3>
+                    <ul>
+                        <li><a href="terms.html">Általános Szerződési Feltételek</a></li>
+                        <li><a href="privacy.html">Adatvédelmi Nyilatkozat</a></li>
+                        <li><a href="impressum.html">Impresszum</a></li>
+                        <li><a href="faq.html">GYIK (Gyakran Ismételt Kérdések)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Előfizetés és fizetés</h3>
+                    <ul>
+                        <li><a href="packages.html">Csomagjaink</a></li>
+                        <li><a href="payment-options.html">Fizetési lehetőségek</a></li>
+                        <li><a href="manage-subscription.html">Előfizetés kezelése</a></li>
+                        <li><a href="gift-cards.html">Ajándékkártyák</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BOGNAIR. Minden jog fenntartva.</p>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-google-pay"></i>
+                    <i class="fab fa-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top-button" aria-label="Vissza az oldal tetejére"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

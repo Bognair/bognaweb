@@ -1,0 +1,400 @@
+/* Reszponzív design */
+
+@media (max-width: 992px) {
+    .container {
+        padding: 20px; /* Kicsit nagyobb padding */
+    }
+
+    .main-nav .nav-list li {
+        margin-left: 25px;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        padding: 80px 20px;
+        text-align: center;
+        gap: 40px; /* Kevesebb rés mobilra */
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 3.2em; /* Mobilra kisebb, de még mindig hatásos */
+        text-align: center;
+    }
+
+    .typewriter-text {
+        font-size: 2.2em;
+        margin: 0 auto 20px;
+    }
+
+    .hero-image {
+        margin-top: 40px;
+        flex: unset; /* Visszaállítjuk a flex tulajdonságot */
+    }
+    .hero-image img {
+        width: 280px; /* Mobilra kisebb kép */
+        height: 280px;
+    }
+
+    .skills-section,
+    .portfolio-section,
+    .request-form-section,
+    .pricing-section,
+    .contact-info-section,
+    .workflow-section { /* Munkafolyamat szakasz is */
+        padding: 80px 20px;
+    }
+
+    .skills-grid,
+    .portfolio-grid,
+    .pricing-grid,
+    .contact-details-grid,
+    .workflow-steps-grid { /* Munkafolyamat grid is */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px; /* Kisebb rés */
+    }
+
+    .pricing-card.featured {
+        transform: scale(1.02); /* Kisebb kiemelés mobilnézetben */
+        box-shadow: 0 10px 25px rgba(247, 183, 49, 0.2);
+    }
+    .pricing-card.featured:hover {
+        transform: translateY(-12px) scale(1.03);
+        box-shadow: 0 15px 30px rgba(247, 183, 49, 0.3);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 75px; /* Fejléc magassága + padding */
+        left: 0;
+        background-color: var(--header-bg);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 25px 0;
+        transition: transform 0.4s ease-out;
+        transform: translateY(-110%); /* Kezdetben teljesen rejtve */
+        height: auto;
+    }
+
+    .main-nav .nav-list.active {
+        display: flex;
+        transform: translateY(0); /* Megjelenik */
+    }
+
+    .main-nav .nav-list li {
+        margin: 18px 0; /* Több függőleges térköz */
+        text-align: center;
+    }
+    .main-nav .nav-list a {
+        font-size: 1.2em; /* Nagyobb linkek mobilra */
+    }
+
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .logo {
+        font-size: 2em;
+    }
+
+    .hero-content h2 {
+        font-size: 2.8em;
+    }
+
+    .typewriter-text {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 2.8em; /* Általános h2 mobilra */
+        margin-bottom: 40px;
+    }
+    h2::after {
+        width: 60px; /* Kisebb aláhúzás */
+    }
+
+    .office-map-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .office-image,
+    .map-container {
+        min-width: unset;
+        width: 100%;
+        padding: 25px; /* Kisebb padding */
+    }
+    .office-image .caption {
+        padding: 12px;
+    }
+    .map-container .map-title {
+        font-size: 1.6em;
+    }
+
+    .back-to-top-button {
+        width: 55px; /* Kicsit kisebb mobilra */
+        height: 55px;
+        font-size: 1.5em;
+        bottom: 25px;
+        right: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    .main-header {
+        padding: 12px 0;
+    }
+    .logo {
+        font-size: 1.8em;
+        letter-spacing: 1px;
+    }
+    .logo::before {
+        left: -8px;
+        width: 8px;
+        height: 8px;
+    }
+
+    .theme-toggle-button {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2em;
+        margin-left: 15px;
+    }
+
+    .hamburger-menu {
+        width: 25px;
+        height: 20px;
+        margin-left: 15px;
+    }
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    .main-nav .nav-list {
+        top: 60px; /* Kisebb fejléc magasság */
+        padding: 15px 0;
+    }
+
+
+    .hero-section {
+        padding: 60px 15px;
+        gap: 30px;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2em;
+    }
+
+    .typewriter-text {
+        font-size: 1.5em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+        border-width: 4px;
+    }
+
+    h2 {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+    }
+
+    .skills-section,
+    .portfolio-section,
+    .request-form-section,
+    .pricing-section,
+    .contact-info-section,
+    .workflow-section {
+        padding: 60px 15px;
+    }
+
+    .skills-grid,
+    .portfolio-grid,
+    .pricing-grid,
+    .contact-details-grid,
+    .workflow-steps-grid {
+        grid-template-columns: 1fr; /* Egy oszlop mobilra */
+        gap: 25px;
+    }
+
+    .skill-card {
+        padding: 30px;
+    }
+    .skill-card i {
+        font-size: 3.5em;
+        margin-bottom: 15px;
+    }
+    .skill-card h4 {
+        font-size: 1.5em;
+    }
+
+    .testimonial-card {
+        padding: 30px;
+    }
+    .testimonial-card::before {
+        font-size: 6em;
+        top: -15px;
+        left: 5px;
+    }
+    .testimonial-card .quote {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .project-card {
+        padding-bottom: 20px; /* Kicsit több hely a linkeknek */
+    }
+    .project-thumbnail {
+        height: 200px;
+    }
+    .project-thumbnail .overlay a {
+        font-size: 2.2em;
+    }
+    .project-card h3 {
+        font-size: 1.6em;
+        margin: 20px 20px 10px;
+    }
+    .project-card p {
+        margin: 0 20px 15px;
+        font-size: 0.95em;
+    }
+    .tech-icons {
+        margin: 0 20px 15px;
+        gap: 10px;
+    }
+    .tech-icons i {
+        font-size: 1.6em;
+    }
+    .project-links {
+        margin: 0 20px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .project-links a {
+        padding: 10px 15px;
+        font-size: 1em;
+        justify-content: center;
+    }
+
+    #contact-form {
+        padding: 30px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        font-size: 1em;
+    }
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 15px;
+        border-radius: 8px;
+    }
+    .submit-button {
+        padding: 14px 20px;
+        font-size: 1.1em;
+    }
+    .form-disclaimer {
+        font-size: 0.85em;
+        margin-top: 20px;
+    }
+
+    .pricing-card {
+        padding: 35px 25px;
+    }
+    .pricing-card h3 {
+        font-size: 2em;
+    }
+    .pricing-card .price {
+        font-size: 3em;
+    }
+    .pricing-card ul li {
+        font-size: 1em;
+        gap: 8px;
+    }
+    .pricing-card .btn {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+    .pricing-card.featured {
+        transform: scale(1.01);
+    }
+    .pricing-card.featured::after {
+        font-size: 0.8em;
+        padding: 4px 12px;
+    }
+
+    .workflow-step-card {
+        padding: 30px;
+    }
+    .workflow-step-card .step-icon {
+        font-size: 3.5em;
+        width: 80px;
+        height: 80px;
+    }
+    .workflow-step-card h3 {
+        font-size: 1.6em;
+    }
+
+    .contact-detail-card {
+        padding: 25px;
+    }
+    .contact-detail-card i {
+        font-size: 3em;
+    }
+    .contact-detail-card h3 {
+        font-size: 1.5em;
+    }
+    .office-map-container {
+        gap: 30px;
+    }
+    .office-image,
+    .map-container {
+        padding: 20px;
+    }
+    .map-container .map-title {
+        font-size: 1.4em;
+    }
+
+    .back-to-top-button {
+        width: 45px;
+        height: 45px;
+        font-size: 1.4em;
+        bottom: 15px;
+        right: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .main-footer .footer-columns {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .main-footer .footer-col h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .main-footer .social-links {
+        justify-content: center;
+        display: flex;
+    }
+    .main-footer .footer-bottom {
+        flex-direction: column;
+    }
+}

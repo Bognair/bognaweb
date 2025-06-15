@@ -1,0 +1,405 @@
+/* --- ÚJ STÍLUSOK (footer oldalakhoz és animációkhoz) --- */
+
+/* Általános infó oldalak konténere */
+.info-page-content {
+    padding-top: 100px; /* Kompenzálja a header magasságát */
+    padding-bottom: 50px;
+    background-color: var(--card-background);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    margin-top: 50px; /* Fölösleges hely a header és a tartalom között */
+    animation: fadeInScale 0.8s ease-out forwards; /* Bevezető animáció */
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: translateY(30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.page-title {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--border-color);
+    position: relative;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.info-content {
+    padding: 0 30px;
+    color: var(--light-text-color);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.info-content h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 15px;
+}
+
+.info-content p, .info-content ol, .info-content ul {
+    margin-bottom: 15px;
+}
+
+.info-content ul, .info-content ol {
+    padding-left: 25px;
+}
+
+.info-content li {
+    margin-bottom: 8px;
+}
+
+.info-content a {
+    font-weight: 600;
+}
+
+/* GYIK specifikus stílusok */
+.faq-items .faq-item {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden; /* Rejti a P elemeket alapból */
+    transition: all 0.4s ease-in-out;
+}
+
+.faq-items .faq-item h3 {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px 25px;
+    cursor: pointer;
+    position: relative;
+    border-left: none; /* Felülírja az általános h3 stílust */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.faq-items .faq-item h3:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.faq-items .faq-item h3::after {
+    content: '\f078'; /* Plusz ikon (Font Awesome) */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+    color: var(--light-text-color);
+}
+
+.faq-items .faq-item.active h3::after {
+    content: '\f077'; /* Mínusz ikon */
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-items .faq-item p {
+    padding: 0 25px 20px;
+    margin: 0;
+    max-height: 0; /* Rejtve alapból */
+    opacity: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    visibility: hidden;
+}
+
+.faq-items .faq-item.active p {
+    max-height: 200px; /* Megjeleníti a tartalmat */
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Csomagok oldal specifikus stílusok */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    text-align: center;
+}
+
+.pricing-card {
+    background-color: var(--background-color);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid var(--border-color);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.pricing-card.featured {
+    border-color: var(--primary-color);
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.pricing-card.featured:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.pricing-card h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    border-left: none; /* Felülírja az általános h3 stílust */
+    padding-left: 0;
+}
+
+.pricing-card .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 25px;
+}
+
+.pricing-card .price span {
+    font-size: 1.2rem;
+    color: var(--light-text-color);
+    font-weight: 400;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.pricing-card ul li {
+    font-size: 1rem;
+    color: var(--light-text-color);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing-card ul li i {
+    margin-right: 10px;
+    color: green;
+}
+
+.pricing-card ul li .fa-times {
+    color: var(--primary-color);
+}
+
+.pricing-card .cta-button {
+    width: 80%;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+}
+
+/* Fizetési lehetőségek oldal specifikus stílusok */
+.payment-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    text-align: center;
+}
+
+.payment-card {
+    background-color: var(--background-color);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid var(--border-color);
+}
+
+.payment-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.payment-card i {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.payment-card h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    border-left: none;
+    padding-left: 0;
+}
+
+.payment-card p {
+    font-size: 1rem;
+    color: var(--light-text-color);
+}
+
+/* Ajándékkártyák oldal stílusok */
+.gift-card-info {
+    text-align: center;
+    padding: 0 30px;
+}
+
+.gift-card-info p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.gift-card-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.gift-card-option {
+    background-color: var(--background-color);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    min-width: 220px;
+}
+
+.gift-card-option:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.gift-card-option h3 {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    border-left: none;
+    padding-left: 0;
+}
+
+.gift-card-option .price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.gift-card-option .cta-button {
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.gift-card-info ol {
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto 40px;
+    padding-left: 20px;
+}
+
+.gift-card-info ol li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Előfizetés kezelése oldal stílusok */
+.info-content .small-text {
+    font-size: 0.85rem;
+    color: var(--light-text-color);
+    margin-top: 10px;
+}
+.info-content .button-secondary.cancel-subscription {
+    background-color: #d63030; /* Kicsit pirosabb a lemondáshoz */
+    border-color: #d63030;
+    color: white;
+}
+.info-content .button-secondary.cancel-subscription:hover {
+    background-color: #b02828;
+    border-color: #b02828;
+}
+
+/* Reszponzív módosítások az új oldalakhoz */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+    }
+
+    .info-content {
+        padding: 0 15px;
+    }
+
+    .info-content h3 {
+        font-size: 1.5rem;
+        margin-top: 25px;
+    }
+
+    .pricing-grid,
+    .payment-options-grid,
+    .gift-card-options {
+        grid-template-columns: 1fr; /* Egy oszlop mobilnézetben */
+        padding: 20px;
+    }
+
+    .pricing-card.featured {
+        transform: scale(1.01); /* Kevésbé hangsúlyos skálázás mobilon */
+    }
+    .pricing-card.featured:hover {
+        transform: translateY(-5px) scale(1.02);
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    .info-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .faq-items .faq-item h3 {
+        font-size: 1.2rem;
+        padding: 15px 20px;
+    }
+
+    .pricing-card, .payment-card, .gift-card-option {
+        padding: 20px;
+    }
+
+    .pricing-card h3 {
+        font-size: 1.8rem;
+    }
+    .pricing-card .price {
+        font-size: 2rem;
+    }
+    .payment-card i {
+        font-size: 3rem;
+    }
+    .payment-card h3 {
+        font-size: 1.5rem;
+    }
+    .gift-card-option h3 {
+        font-size: 1.4rem;
+    }
+    .gift-card-option .price {
+        font-size: 1.8rem;
+    }
+}

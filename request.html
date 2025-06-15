@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOGNAIR - Ajánlatkérés</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <h1 class="logo">BOGNAIR</h1>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Rólam</a></li>
+                    <li><a href="references.html">Referenciák</a></li>
+                    <li><a href="request.html" class="active">Ajánlatkérés</a></li>
+                    <li><a href="contact.html">Kapcsolat</a></li>
+                    <button id="theme-toggle" class="theme-toggle-button" aria-label="Téma váltása"><i class="fas fa-moon"></i></button>
+
+                </ul>
+                <div class="hamburger-menu" aria-label="Menü megnyitása/bezárása" role="button" tabindex="0">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="request-form" class="request-form-section container">
+            <h2 class="scroll-anim fade-in-up">Kérjen ajánlatot</h2>
+            <p class="scroll-anim fade-in-up">Töltse ki az alábbi űrlapot, és hamarosan felveszem Önnel a kapcsolatot!</p>
+            <form id="contact-form" class="scroll-anim fade-in-up">
+                <form action="https://formspree.io/f/mdkgqazp" method="POST">
+
+                <div class="form-group">
+                    <label data-i18n="name" for="name">Név</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="idopont_email" for="email">E-mail:</label>
+                    <input type="email" id="email" name="_replyto" required>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="idopont_uzenet" for="message">Üzenet:</label>
+                    <textarea id="message" name="message" rows="6" ></textarea>
+                </div>
+                <button data-i18n="idopont_kuldes" type="submit" class="submit-button">Üzenet küldése <i class="fas fa-paper-plane"></i></button>
+                <p class="form-disclaimer">**Megjegyzés:** Ez az űrlap frontend oldali validációt tartalmaz. Az üzenetek tényleges elküldéséhez szerveroldali (backend) integrációra van szükség, vagy egy harmadik féltől származó szolgáltatás (pl. Formspree, Netlify Forms) használatára.</p>
+            </form>
+        </form>
+
+        </section>
+
+
+
+
+        <section id="request-form" class="request-form-section container">
+            <h2 class="scroll-anim fade-in-up">Kérjen ajánlatot</h2>
+            <p class="scroll-anim fade-in-up">Töltse ki az alábbi űrlapot, és hamarosan felveszem Önnel a kapcsolatot!</p>
+            <form id="contact-form" class="scroll-anim fade-in-up">
+
+        <form action="https://formspree.io/f/mdkgqazp" method="POST">
+
+            <div class="form-group">
+            <label data-i18n="name" for="name">Név</label>
+            <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+            <label data-i18n="idopont_email" for="email">Email</label>
+            <input type="email" id="email" name="_replyto" required>
+            </div>
+
+            <div class="form-group">
+            <label data-i18n="idopont_uzenet" for="message">Üzenet</label>
+            <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button data-i18n="idopont_kuldes" type="submit">Küldés</button>
+        </form>
+    </form>
+</section>
+
+
+
+
+
+
+        <section id="pricing" class="pricing-section container">
+            <h2 class="scroll-anim fade-in-up">Árak és Csomagok</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card scroll-anim zoom-in">
+                    <h3>Onepager Weboldal</h3>
+                    <p class="price">99.000 Ft-tól</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Reszponzív Design</li>
+                        <li><i class="fas fa-check"></i> Max. 5 oldal</li>
+                        <li><i class="fas fa-check"></i> Kapcsolat űrlap</li>
+                        <li><i class="fas fa-check"></i> Alap SEO optimalizálás</li>
+                        <li><i class="fas fa-times"></i> Animációk (korlátozott)</li>
+                        <li><i class="fas fa-times"></i> Egyedi Funkciók</li>
+                    </ul>
+                    <a href="request.html#request-form" class="btn">Érdekel</a>
+                </div>
+
+                <div class="pricing-card featured scroll-anim zoom-in" data-scroll-delay="100">
+                    <h3>Premium Weboldal</h3>
+                    <p class="price">190.000 Ft-tól</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Reszponzív Design</li>
+                        <li><i class="fas fa-check"></i> Max. 12 oldal</li>
+                        <li><i class="fas fa-check"></i> Részletes oldal kidolgozások</li>
+                        <li><i class="fas fa-check"></i> Fejlett SEO optimalizálás</li>
+                        <li><i class="fas fa-check"></i> Dinamikus animációk</li>
+                        <li><i class="fas fa-check"></i> Egyedi Funkciók (korlátozott)</li>
+                    </ul>
+                    <a href="request.html#request-form" class="btn btn-primary">Érdekel</a>
+                </div>
+
+                <div class="pricing-card scroll-anim zoom-in" data-scroll-delay="200">
+                    <h3>Egyedi Fejlesztés</h3>
+                    <p class="price">Egyedi Árajánlat</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Teljesen egyedi design</li>
+                        <li><i class="fas fa-check"></i> Korlátlan oldalszám</li>
+                        <li><i class="fas fa-check"></i> Komplex interaktív elemek</li>
+                        <li><i class="fas fa-check"></i> Részletes SEO és teljesítmény optimalizálás</li>
+                        <li><i class="fas fa-check"></i> Speciális animációk</li>
+                        <li><i class="fas fa-check"></i> Bármilyen egyedi funkció</li>
+                    </ul>
+                    <a href="request.html#request-form" class="btn">Érdekel</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="workflow" class="workflow-section container">
+        <h2 class="scroll-anim fade-in-up">Közös munkafolyamatunk lépésről lépésre</h2>
+        <div class="workflow-steps-grid">
+            <div class="workflow-step-card scroll-anim fade-in-up">
+                <div class="step-icon"><i class="fas fa-comments"></i></div>
+                <h3>1. Kapcsolatfelvétel és Igényfelmérés</h3>
+                <p>Az első lépés egy ingyenes konzultáció, ahol átbeszéljük az ötleteit, céljait és a projekt általános kereteit. Megismerem az Ön vállalkozását és elképzeléseit.</p>
+            </div>
+            <div class="workflow-step-card scroll-anim fade-in-up" data-scroll-delay="100">
+                <div class="step-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3>2. Tervezés és Ajánlat</h3>
+                <p>Az igényfelmérés alapján elkészítek egy részletes tervet és egy személyre szabott árajánlatot, amely tartalmazza a munkafolyamatot, a várható időtartamot és a költségeket.</p>
+            </div>
+            <div class="workflow-step-card scroll-anim fade-in-up" data-scroll-delay="200">
+                <div class="step-icon"><i class="fas fa-code"></i></div>
+                <h3>3. Fejlesztés és Kommunikáció</h3>
+                <p>Az ajánlat elfogadása után megkezdődik a fejlesztés. Folyamatosan kommunikálunk, és rendszeres időközönként bemutatom a haladást, hogy visszajelzést adhasson.</p>
+            </div>
+            <div class="workflow-step-card scroll-anim fade-in-up" data-scroll-delay="300">
+                <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+                <h3>4. Tesztelés és Finomhangolás</h3>
+                <p>Miután a fejlesztés befejeződött, alapos tesztelésnek vetjük alá az oldalt minden eszközön és böngészőben. Az Ön visszajelzései alapján elvégezzük a szükséges finomhangolásokat.</p>
+            </div>
+            <div class="workflow-step-card scroll-anim fade-in-up" data-scroll-delay="400">
+                <div class="step-icon"><i class="fas fa-rocket"></i></div>
+                <h3>5. Indítás és Támogatás</h3>
+                <p>Az oldal élesítése után sem engedjük el a kezét. Igény esetén biztosítok induló támogatást, karbantartási útmutatót, és szükség esetén további segítséget nyújtok.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h3>BOGNAIR</h3>
+                    <p>Ahol a történetek sosem érnek véget, még offline sem. Merülj el a szórakozásban bárhol, bármikor!</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/in/yourprofile" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/yourusername" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Gyorslinkek</h3>
+                    <ul>
+                        <li><a href="index.html">Rólam</a></li>
+                        <li><a href="references.html">Referenciák</a></li>
+                        <li><a href="request.html">Ajánlatkérés</a></li>
+                        <li><a href="contact.html">Kapcsolat</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Információk</h3>
+                    <ul>
+                        <li><a href="terms.html">Általános Szerződési Feltételek</a></li>
+                        <li><a href="privacy.html">Adatvédelmi Nyilatkozat</a></li>
+                        <li><a href="impressum.html">Impresszum</a></li>
+                        <li><a href="faq.html">GYIK (Gyakran Ismételt Kérdések)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Előfizetés és fizetés</h3>
+                    <ul>
+                        <li><a href="packages.html">Csomagjaink</a></li>
+                        <li><a href="payment-options.html">Fizetési lehetőségek</a></li>
+                        <li><a href="manage-subscription.html">Előfizetés kezelése</a></li>
+                        <li><a href="gift-cards.html">Ajándékkártyák</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BOGNAIR. Minden jog fenntartva.</p>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-google-pay"></i>
+                    <i class="fab fa-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top-button" aria-label="Vissza az oldal tetejére"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

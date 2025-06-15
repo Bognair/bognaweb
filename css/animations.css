@@ -1,0 +1,61 @@
+/* Görgetéskor megjelenő animációk alapjai */
+.scroll-anim {
+    opacity: 0;
+    transform: translateY(40px); /* Nagyobb kezdeti elmozdulás */
+    transition: opacity 0.9s cubic-bezier(0.23, 1, 0.32, 1), transform 0.9s cubic-bezier(0.23, 1, 0.32, 1); /* Simább, gyorsuló/lassuló animáció */
+}
+
+.scroll-anim.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Konkrét animációk variációi */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(80px); /* Még nagyobb elmozdulás */
+}
+.fade-in-up.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(80px);
+}
+.fade-in-right.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-80px);
+}
+.fade-in-left.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.85); /* Kisebb kezdeti méret */
+}
+.zoom-in.revealed {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Hamburger menü animáció */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}

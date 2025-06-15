@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOGNAIR - Fizetési lehetőségek</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <h1 class="logo">BOGNAIR</h1>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Rólam</a></li>
+                    <li><a href="references.html">Referenciák</a></li>
+                    <li><a href="request.html">Ajánlatkérés</a></li>
+                    <li><a href="contact.html" class="active">Kapcsolat</a></li>
+                    <button id="theme-toggle" class="theme-toggle-button" aria-label="Téma váltása"><i class="fas fa-moon"></i></button>
+
+                </ul>
+                <div class="hamburger-menu" aria-label="Menü megnyitása/bezárása" role="button" tabindex="0">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="info-page-content container">
+            <h2 class="page-title">Fizetési lehetőségek</h2>
+            <div class="info-content payment-options-grid">
+                <div class="payment-card">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <h3>Bankkártyás fizetés</h3>
+                    <p>Elfogadunk Visa és MasterCard bankkártyákat. A tranzakciók biztonságosan, titkosított kapcsolaton keresztül zajlanak.</p>
+                </div>
+                <div class="payment-card">
+                    <i class="fab fa-cc-paypal"></i>
+                    <h3>PayPal</h3>
+                    <p>Fizessen kényelmesen és biztonságosan PayPal fiókjával. Gyors és egyszerű tranzakciók.</p>
+                </div>
+                <div class="payment-card">
+                    <i class="fab fa-google-pay"></i>
+                    <h3>Google Pay</h3>
+                    <p>Android eszközökön és Chrome böngészővel elérhető gyorsfizetési megoldás. Csak néhány kattintás, és kész is!</p>
+                </div>
+                <div class="payment-card">
+                    <i class="fab fa-apple-pay"></i>
+                    <h3>Apple Pay</h3>
+                    <p>Apple eszközökön elérhető, érintés nélküli fizetési mód. Biztonságos és privát tranzakciók.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h3>BOGNAIR</h3>
+                    <p>Ahol a történetek sosem érnek véget, még offline sem. Merülj el a szórakozásban bárhol, bármikor!</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/in/yourprofile" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/yourusername" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Gyorslinkek</h3>
+                    <ul>
+                        <li><a href="index.html">Rólam</a></li>
+                        <li><a href="references.html">Referenciák</a></li>
+                        <li><a href="request.html">Ajánlatkérés</a></li>
+                        <li><a href="contact.html">Kapcsolat</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Információk</h3>
+                    <ul>
+                        <li><a href="terms.html">Általános Szerződési Feltételek</a></li>
+                        <li><a href="privacy.html">Adatvédelmi Nyilatkozat</a></li>
+                        <li><a href="impressum.html">Impresszum</a></li>
+                        <li><a href="faq.html">GYIK (Gyakran Ismételt Kérdések)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Előfizetés és fizetés</h3>
+                    <ul>
+                        <li><a href="packages.html">Csomagjaink</a></li>
+                        <li><a href="payment-options.html">Fizetési lehetőségek</a></li>
+                        <li><a href="manage-subscription.html">Előfizetés kezelése</a></li>
+                        <li><a href="gift-cards.html">Ajándékkártyák</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BOGNAIR. Minden jog fenntartva.</p>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-google-pay"></i>
+                    <i class="fab fa-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top-button" aria-label="Vissza az oldal tetejére"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
