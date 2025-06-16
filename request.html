@@ -37,60 +37,37 @@
     </header>
 
     <main>
+
         <section id="request-form" class="request-form-section container">
             <h2 class="scroll-anim fade-in-up">Kérjen ajánlatot</h2>
             <p class="scroll-anim fade-in-up">Töltse ki az alábbi űrlapot, és hamarosan felveszem Önnel a kapcsolatot!</p>
-            <form id="contact-form" class="scroll-anim fade-in-up">
-                <form action="https://formspree.io/f/mdkgqazp" method="POST">
-
-                <div class="form-group">
-                    <label data-i18n="name" for="name">Név</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label data-i18n="idopont_email" for="email">E-mail:</label>
-                    <input type="email" id="email" name="_replyto" required>
-                </div>
-                <div class="form-group">
-                    <label data-i18n="idopont_uzenet" for="message">Üzenet:</label>
-                    <textarea id="message" name="message" rows="6" ></textarea>
-                </div>
+          
+            <form id="contact-form" class="scroll-anim fade-in-up" action="https://formspree.io/f/mdkgqazp" method="POST">
+              
+              <div class="form-group">
+                <label data-i18n="name" for="name">Név</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+          
+              <div class="form-group">
+                <label data-i18n="idopont_email" for="email">Email</label>
+                <input type="email" id="email" name="_replyto" required>
+              </div>
+          
+              <div class="form-group">
+                <label data-i18n="idopont_uzenet" for="message">Üzenet</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+          
+              <!-- opcionális: rejtett mező tárgyhoz -->
+              <input type="hidden" name="_subject" value="Új üzenet a weboldalról!">
+          
+              <!-- opcionális: Formspree success redirect -->
+              <!-- <input type="hidden" name="_next" value="https://sajatoldalad.hu/koszono.html"> -->
+          
                 <button data-i18n="idopont_kuldes" type="submit" class="submit-button">Üzenet küldése <i class="fas fa-paper-plane"></i></button>
-                <p class="form-disclaimer">**Megjegyzés:** Ez az űrlap frontend oldali validációt tartalmaz. Az üzenetek tényleges elküldéséhez szerveroldali (backend) integrációra van szükség, vagy egy harmadik féltől származó szolgáltatás (pl. Formspree, Netlify Forms) használatára.</p>
             </form>
-        </form>
-
-        </section>
-
-
-
-
-        <section id="request-form" class="request-form-section container">
-            <h2 class="scroll-anim fade-in-up">Kérjen ajánlatot</h2>
-            <p class="scroll-anim fade-in-up">Töltse ki az alábbi űrlapot, és hamarosan felveszem Önnel a kapcsolatot!</p>
-            <form id="contact-form" class="scroll-anim fade-in-up">
-
-        <form action="https://formspree.io/f/mdkgqazp" method="POST">
-
-            <div class="form-group">
-            <label data-i18n="name" for="name">Név</label>
-            <input type="text" id="name" name="name" required>
-            </div>
-
-            <div class="form-group">
-            <label data-i18n="idopont_email" for="email">Email</label>
-            <input type="email" id="email" name="_replyto" required>
-            </div>
-
-            <div class="form-group">
-            <label data-i18n="idopont_uzenet" for="message">Üzenet</label>
-            <textarea id="message" name="message" required></textarea>
-            </div>
-
-            <button data-i18n="idopont_kuldes" type="submit">Küldés</button>
-        </form>
-    </form>
-</section>
+          </section>
 
 
 
