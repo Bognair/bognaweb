@@ -362,14 +362,17 @@ a:hover {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Nagyobb min-width */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 5fr)); /* Nagyobb min-width */
     gap: 35px; /* Több térköz */
 }
 
 .skill-card {
     background-color: var(--background-color);
     border-radius: 15px; /* Kerekebb sarkok */
-    padding: 40px; /* Több padding */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Lágyabb, nagyobb árnyék */
     transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
     text-align: center;
@@ -1342,7 +1345,7 @@ body.dark-mode .testimonial-card::before {
     .timeline-item:nth-child(odd) .timeline-content::after,
     .timeline-item:nth-child(even) .timeline-content::after {
         left: -10px;
-        border-color: transparent #fff transparent transparent;
+        border-color: transparent transparent transparent;
     }
 }
 /* Összes vélemény gomb */

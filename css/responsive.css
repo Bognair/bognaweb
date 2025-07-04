@@ -93,7 +93,9 @@
         text-align: center;
     }
     .main-nav .nav-list a {
-        font-size: 1.2em; /* Nagyobb linkek mobilra */
+        font-size: 1.5em; /* Nagyobb linkek mobilra */
+        font-weight: bold;
+
     }
 
 
@@ -169,19 +171,53 @@
         width: 35px;
         height: 35px;
         font-size: 1.2em;
-        margin-left: 15px;
+        margin-left: 20px;
     }
 
     .hamburger-menu {
         width: 25px;
-        height: 20px;
+        height: 25px;
         margin-left: 15px;
+        display: flex;
+
+
+    }
+    .hamburger-menu .bar{
+        transform-origin: center;
+    }
+    .hamburger-menu .bar:nth-child(1) {
+        width: 22px;
+        height: 3px;
+        margin: 4px auto;   /* függőleges margó 4px, vízszintes auto = középre */
+    }
+    .hamburger-menu .bar:nth-child(2) {
+        width: 30px;
+        height: 3px;
+        margin-left: -2px ;   /* függőleges margó 4px, vízszintes auto = középre */
+
+    }
+    .hamburger-menu .bar:nth-child(3) {
+        width: 22px;
+        height: 3px;
+        margin: 4px auto;   /* függőleges margó 4px, vízszintes auto = középre */
     }
     .hamburger-menu.active .bar:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
+        /* Felső vonal: elmozdul a középső mögé és eltűnik */
+        transform: translateY(13px) translateX(0%); /* Le és jobbra csúszik */
+        opacity: 0;
     }
+    
+    .hamburger-menu.active .bar:nth-child(2) {
+        /* Középső vonal: Megmarad, esetleg egy kis színváltás */
+        transform: translateX(0); /* Biztosítja, hogy ne mozduljon el */
+        background-color:black; /* Fényesebb lesz, ha aktív */
+        opacity: 1;
+    }
+    
     .hamburger-menu.active .bar:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
+        /* Alsó vonal: elmozdul a középső mögé és eltűnik */
+        transform: translateY(-13px) translateX(0%); /* Föl és jobbra csúszik */
+        opacity: 0;
     }
     .main-nav .nav-list {
         top: 60px; /* Kisebb fejléc magasság */
