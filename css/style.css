@@ -337,18 +337,13 @@ a:hover {
 .hero-image img {
     max-width: 100%;
     border-radius: 50%;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1); /* Erősebb árnyék */
-    border: 6px solid var(--primary-color); /* Vastagabb keret */
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     object-fit: cover; /* Képarány megtartása */
     width: 350px; /* Fix méret a kör alak megtartásához */
     height: 350px; /* Fix méret a kör alak megtartásához */
 }
 
-.hero-image img:hover {
-    transform: scale(1.05) rotate(2deg); /* Enyhe forgás is */
-    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-}
+
 
 /* Skills szakasz (index.html) */
 .skills-section {
